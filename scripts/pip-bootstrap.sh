@@ -1,18 +1,26 @@
 #!/usr/bin/env bash
 
+# Version of application to install
+PACKER_VERSION="1.6.6"
+
 # Save current directory
 ORIG_DIR=$(pwd)
 
 # Setup OS/Architecture metadata
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 
+# Archive File Names
+PACKER_ARCHIVE="packer_${PACKER_VERSION}_${OS}_amd64.zip"
+
 # URLs
+PACKER_URL="https://releases.hashicorp.com/packer/${PACKER_VERSION}/${PACKER_ARCHIVE}"
 PIP_URL="https://bootstrap.pypa.io/get-pip.py"
 
 # Directory paths
 TMP_PATH="/tmp"
 OPT_PATH="${HOME}/opt"
 BIN_PATH="${HOME}/bin"
+PACKER_PATH="${OPT_PATH}/packer-${PACKER_VERSION}"
 
 # Install prerequisites
 echo -n "Checking for unzip... "
@@ -96,10 +104,52 @@ else
     echo "FOUND"
 fi
 
+NEED_PACKER=1
+
+# Check for packer
+echo -n "Checking for packer... "
+if [[ -n "$(which packer)" ]]
+then
+    PACKER_VERSION_DETECTED=$(packer --version)
+    if [[ "${PACKER_VERSION_DETECTED}" == "${PACKER_VERSION}" ]]
+    then
+        echo "FOUND"
+        NEED_PACKER=
+    else
+        echo "VERSION MISMATCH (v${PACKER_VERSION_DETECTED})"
+    fi
+else
+    echo "MISSING"
+fi
+
 # Download archives
 cd ${TMP_PATH}
 
+if [[ -n "${NEED_PACKER}" ]]
+then
+    echo "Downloading packer..."
+    curl -O "${PACKER_URL}"
+fi
 echo "Finished downloading archives."
+
+# Install packer
+if [[ -n "${NEED_PACKER}" ]]
+then
+    echo "Unpacking packer..."
+    mkdir -p ${PACKER_PATH}
+    cd ${PACKER_PATH}
+    unzip "${TMP_PATH}/${PACKER_ARCHIVE}"
+    echo "Finished unpacking packer."
+fi
+
+# Setup convenience links
+echo -n "Setup convenience links... "
+cd ${OPT_PATH}
+
+if [[ -n "${NEED_PACKER}" ]]
+then
+    ln -nsf "packer-${PACKER_VERSION}" terraform
+fi
 
 echo "DONE"
 
@@ -107,6 +157,11 @@ echo "DONE"
 echo -n "Setup bin directory... "
 mkdir -p $BIN_PATH
 cd $BIN_PATH
+
+if [[ -n "${NEED_PACKER}" ]]
+then
+    ln -fs "${OPT_PATH}/packer/packer" packer
+fi
 
 echo "DONE"
 
