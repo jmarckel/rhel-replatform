@@ -20,7 +20,7 @@ VPC cloud is a prime destination for OpenShift.
 
 ## Deliverables
 
-**RPM builds**
+### RPM builds
 
 * Update Host Storage Agent utilities.
 * Migrate Debian-based packages to a build process that supports both Debian
@@ -32,14 +32,14 @@ VPC cloud is a prime destination for OpenShift.
 * Manage user story delivery through agile sprints, including planning,
   execution, demo, and reflection.
 
-**System bring-up**
+### System bring-up
 
 * Update and migrate AppArmor NextGen security rules to SELinux-based security
   rules.
 * Conduct system bring-up.
 * Validate system bring-up upon availability of all buyer-developed pillars.
 
-**System testing**
+### System testing
 
 * Automated function test updates:
 * Validate storage connectivity from Red Hat base HostOS to be on par with
@@ -56,7 +56,7 @@ VPC cloud is a prime destination for OpenShift.
   testing of NextGen control plane in staging environment. Address and fix any
   issues within the Storage Service pillar that are found in end-to-end testing.
 
-**Regression testing and break/fix support**
+### Regression testing and break/fix support
 
 * Virtual-machine-based or single/two-node-based validation of system
   functionality.
@@ -83,7 +83,7 @@ Team member emails, Slack, etc. will be filled in.
 
 ## Links
 
-**Libvirt**
+### Libvirt
 
 * [Explanation of libvirt, KVM, and QEMU](https://serverfault.com/questions/208693/difference-between-kvm-and-qemu)
 * [FAQs](https://wiki.libvirt.org/page/FAQ)
