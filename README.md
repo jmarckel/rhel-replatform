@@ -20,7 +20,7 @@ VPC cloud is a prime destination for OpenShift.
 
 ### RPM builds
 
-* Update Host Storage Agent utilities.
+* Update host storage agent utilities.
 * Migrate Debian-based packages to a build process that supports both Debian
   packages and RPM-based packages.
 * Test the ability to install packages both to Ubuntu-based HostOS and Red Hat
@@ -58,13 +58,25 @@ VPC cloud is a prime destination for OpenShift.
 
 * Virtual-machine-based or single/two-node-based validation of system
   functionality.
-* End-to-end Create Virtual System Image validation.
+* End-to-end create virtual system image validation.
 * End-to-end regression test functionality for boot and secondary volumes, bring
   your own key (BYOK), and volume expansion.
 * End-to-end regression test functionality for file, snapshots, and encrypted
   images.
 * End-to-end security regression test with security policies in place with
   respect to SELinux.
+
+## Resources
+
+The following resources need to be identified.
+
+* Is there a HostOS team.
+* Where are code and deployment repositories and who is a gatekeeper.
+* What modificationshas IBM made to Ubuntu that needs to be conveyed to Red Hat
+  regarding advanced virtualization packages.
+* Who within Red Hat is going to coordinate the RHEL 8.4 base and the inclusion
+  of advanced virtualization packages.
+* Where is the CI/CD pipeline (Jenkins) that build the existing Ubuntu images.
 
 ## Team
 
