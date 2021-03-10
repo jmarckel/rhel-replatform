@@ -16,8 +16,6 @@ We anticipate using RHEL 8.4 with the Advanced Virtualization packages. This
 allows IBM to certify key Red Hat workloads on our cloud and ensure that IBM's
 VPC cloud is a prime destination for OpenShift.
 
----
-
 ## Deliverables
 
 ### RPM builds
@@ -68,8 +66,6 @@ VPC cloud is a prime destination for OpenShift.
 * End-to-end security regression test with security policies in place with
   respect to SELinux.
 
----
-
 ## Team
 
 Team member emails, Slack, etc. will be filled in.
@@ -78,8 +74,6 @@ Team member emails, Slack, etc. will be filled in.
 * Robert Metcalf
 * Scott Rooke
 * Tim Barry
-
----
 
 ## Links
 
