@@ -2,6 +2,7 @@
 
 # Version of application to install
 HELM2_VERSION="2.17.0"
+KUBECTL_VERSION="1.17.14"
 TERRAFORM_VERSION="0.12.29"
 
 # Save current directory
@@ -109,6 +110,7 @@ else
 fi
 
 NEED_HELM2=1
+NEED_KUBECTL=1
 NEED_TERRAFORM=1
 
 # Check for Helm v2
@@ -164,6 +166,31 @@ then
     curl -O "${TERRAFORM_URL}"
 fi
 echo "Finished downloading archives."
+
+# Install Google Cloud SDK
+if [[ -n "${NEED_GCLOUD}" ]]
+then
+    echo "Unpacking Google Cloud SDK..."
+    mkdir -p ${GCLOUD_PATH}
+    cd ${GCLOUD_PATH}
+    tar xzvf "${TMP_PATH}/${GCLOUD_ARCHIVE}" --strip-components 1
+    echo "Finished unpacking Google Cloud SDK."
+    echo "Running Google Cloud SDK installer..."
+    ${GCLOUD_PATH}/install.sh
+    echo "Finished running Google Cloud SDK installer."
+fi
+
+# Install Kubectl
+if [[ -n "${NEED_KUBECTL}" ]]
+then
+    echo "Installing kubectl..."
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/amd64/kubectl"
+    chmod +x ./kubectl
+    mv ./kubectl /usr/local/bin/kubectl
+    sudo chown root: /usr/local/bin/kubectl
+    sudo echo "Finished installing kubectl version:"
+    kubectl version --client
+fi
 
 # Install helm v2
 if [[ -n "${NEED_HELM2}" ]]
