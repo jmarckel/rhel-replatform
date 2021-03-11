@@ -89,6 +89,49 @@ Team member emails, Slack, etc. will be filled in.
 
 ## Links
 
+### IBM Cloudlab
+
+The [cloudlab](https://github.ibm.com/cloudlab) repository is a high-level
+organization for IBM's Cloud.
+
+The cloudlab repository is for cloud functionality, not applications or
+services. Some examples of apps/services are: KMS (Key Management Service), and
+RIAS (Regional Infrastructure API Service) - those are in individual
+repositories.
+
+All cloud implementations, not just IBM, is off the charts when it comes to
+scale, scope, and complexity. There are layers upon layers of hardware,
+software, processes, and services. Add in hundreds of acronyms and pretty soon
+you can't comprehend what's going on without a guide - cloudlab is your guide.
+
+The following links decompose the IBM Cloud into manageable pieces that makes it
+easier to comprehend.
+
+This project (Ubuntu to Red Hat platform) is interested in the following areas
+(these are major sections with numerous sub-sections):
+
+* [SRB - Systems Review Board](https://github.ibm.com/cloudlab/srb)
+  * The SRB is a hand-picked cross-functional group of senior engineers and
+    architects who work with development teams to review under-development
+    projects for consistency and architectural alignment across the VPC product,
+    and any IaaS offerings that integrate closely with VPC.
+
+* [HostOS - architecture](https://github.ibm.com/cloudlab/srb/tree/master/architecture/hostos)
+  * The Host Operating System CI/CD mission is to build and maintain the
+    bare-metal and virtualized Operating Environments that support the Genesis
+    Program, which is the next generation of IBM's Cloud.
+
+* [HostOS - repositories](https://github.ibm.com/cloudlab?q=hostos)
+  * There are 18 HostOS repositories (19 results but 1 is archived) for building
+    and maintaining IBM Cloud hosts.
+
+* [IaaS internal documentation](https://pages.github.ibm.com/cloudlab/internal-docs/)
+  * Internal documentation for the IaaS Platform Operations team. Content
+    includes new feature descriptions, runbooks, and troubleshooting solutions
+    for the IBM Cloud infrastructure.
+
+* [Platform inventory](https://github.ibm.com/cloudlab/platform-inventory)
+  * Mzone and undercloud yml files.
 ### Libvirt
 
 * [Explanation of libvirt, KVM, and QEMU](https://serverfault.com/questions/208693/difference-between-kvm-and-qemu)
