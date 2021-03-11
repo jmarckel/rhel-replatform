@@ -87,6 +87,7 @@ Team member emails, Slack, etc. will be filled in.
 
 * Jeff Marckel
 * Robert Metcalf
+* Russell Cattelan
 * Scott Rooke
 * Tim Barry
 
@@ -148,3 +149,16 @@ This project (Ubuntu to Red Hat platform) is interested in the following areas
 * [Libvirt main page](https://libvirt.org/index.html)
 * [RPM deployment guidance](https://libvirt.org/kbase/rpm-deployment.html)
 * [Security](https://libvirt.org/drvqemu.html) mentions AppArmor and SELinux
+
+### Security
+
+Ubuntu 18.04 (the existing IBM Cloud platform) uses AppArmor. Red Hat 8.x uses
+SELinux.
+
+* AppArmor
+  * [Ubuntu overview](https://ubuntu.com/server/docs/security-apparmor)
+  * [Ubuntu wiki](https://wiki.ubuntu.com/AppArmor)
+  * [Profiles](https://ubuntu.com/tutorials/beginning-apparmor-profile-development#1-overview)
+
+* SELinux
+  * [Red Hat overview](https://www.redhat.com/en/topics/linux/what-is-selinux)
