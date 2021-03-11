@@ -135,7 +135,8 @@ This project (Ubuntu to Red Hat platform) is interested in the following areas
 
 * [NextGen environments](https://github.ibm.com/nextgen-environments)
   * This describes HostOS bundles for each environment (DAL, WDC, and mzones).
-    This is *not* a list of servers and IP addresses.
+    This is *not* an inventory list (servers and IP addresses). See the
+    following repository, *platform inventory*.
 
 * [Platform inventory](https://github.ibm.com/cloudlab/platform-inventory)
   * Mzone and undercloud yml files.
