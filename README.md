@@ -16,6 +16,9 @@ We anticipate using RHEL 8.4 with the Advanced Virtualization packages. This
 allows IBM to certify key Red Hat workloads on our cloud and ensure that IBM's
 VPC cloud is a prime destination for OpenShift.
 
+This document is based on the
+[SRB proposal 1752](https://github.ibm.com/cloudlab/srb/tree/adf5cb953945033bd93793573f4dfb1b421f6d7f/proposals/1752).
+
 ## Deliverables
 
 ### RPM builds
@@ -72,7 +75,7 @@ The following resources need to be identified.
 
 * Is there a HostOS team.
 * Where are code and deployment repositories and who is a gatekeeper.
-* What modificationshas IBM made to Ubuntu that needs to be conveyed to Red Hat
+* What modifications IBM made to Ubuntu that needs to be conveyed to Red Hat
   regarding advanced virtualization packages.
 * Who within Red Hat is going to coordinate the RHEL 8.4 base and the inclusion
   of advanced virtualization packages.
@@ -130,8 +133,13 @@ This project (Ubuntu to Red Hat platform) is interested in the following areas
     includes new feature descriptions, runbooks, and troubleshooting solutions
     for the IBM Cloud infrastructure.
 
+* [NextGen environments](https://github.ibm.com/nextgen-environments)
+  * This describes HostOS bundles for each environment (DAL, WDC, and mzones).
+    This is *not* a list of servers and IP addresses.
+
 * [Platform inventory](https://github.ibm.com/cloudlab/platform-inventory)
   * Mzone and undercloud yml files.
+
 ### Libvirt
 
 * [Explanation of libvirt, KVM, and QEMU](https://serverfault.com/questions/208693/difference-between-kvm-and-qemu)
