@@ -10,8 +10,8 @@ artifacts used by the HostOS CI/CD team
 
 ## Overview
 
-* The HostOS CI/CD team is responsible for developing the tools necessary to boot,
-  deploy and upgrade bare metal systems up to the 'platform' layer.
+* The HostOS CI/CD team is responsible for developing the tools necessary to
+  boot, deploy and upgrade bare metal systems up to the 'platform' layer.
 * The deploy tools are modular and reasonably general purpose with the intent
   that support can be extended to support any bare metal deployment.
 * The high level CI/CD tooling architecture can be found here in the SRB git
@@ -29,7 +29,6 @@ artifacts used by the HostOS CI/CD team
   `hostos-xxx-release`.
 * All HostOS repositories can be found in the cloudlab github organization.
 * All generated HostOS artifacts are stored in IBM Artifactory.
-
 
 | Repository                   | Description | Generate Artifact | Comments |
 | ---------------------------- | ----------- | ----------------- | -------- |
