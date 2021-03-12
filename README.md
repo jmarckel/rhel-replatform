@@ -1,5 +1,15 @@
 # Red Hat Enterprise Linux - Platform
 
+## Table of contents
+
+1. [Overview](#overview)
+2. [Deliverables](#deliverables)
+   * [RPM builds](#rpm-builds), [System bring-up](#system-bring-up), [System testing](#system-testing), [Regression testing](#regression-testing)
+3. [Resources](#resources)
+4. [Team](#team)
+5. [Links](#links)
+   * [IBM Cloudlab](#ibm-cloudlab), [Libvirt](#libvirt), [Security](#security)
+
 ## Overview
 
 The current IBM Cloud hypervisor is built on a customized variant of Ubuntu
@@ -32,6 +42,7 @@ This document is based on the
   the milestone commitments.
 * Manage user story delivery through agile sprints, including planning,
   execution, demo, and reflection.
+* See the [HostOS page](hostos/README.md).
 
 ### System bring-up
 
@@ -57,7 +68,7 @@ This document is based on the
   testing of NextGen control plane in staging environment. Address and fix any
   issues within the Storage Service pillar that are found in end-to-end testing.
 
-### Regression testing and break/fix support
+### Regression testing
 
 * Virtual-machine-based or single/two-node-based validation of system
   functionality.
@@ -140,7 +151,7 @@ This project (Ubuntu to Red Hat platform) is interested in the following areas
     following repository, *platform inventory*.
 
 * [Platform inventory](https://github.ibm.com/cloudlab/platform-inventory)
-  * Mzone and undercloud yml files.
+  * Mzone and under-cloud yml files.
 
 ### Libvirt
 
