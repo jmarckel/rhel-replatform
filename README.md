@@ -42,6 +42,7 @@ This document is based on the
   the milestone commitments.
 * Manage user story delivery through agile sprints, including planning,
   execution, demo, and reflection.
+* See the [HostOS page](hostos/README.md)
 
 ### System bring-up
 
@@ -150,7 +151,7 @@ This project (Ubuntu to Red Hat platform) is interested in the following areas
     following repository, *platform inventory*.
 
 * [Platform inventory](https://github.ibm.com/cloudlab/platform-inventory)
-  * Mzone and undercloud yml files.
+  * Mzone and under-cloud yml files.
 
 ### Libvirt
 
